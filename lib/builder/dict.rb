@@ -1,4 +1,4 @@
-$KCODE = 'UTF8'
+##coding: utf-8
 
 def process(path, tree)
   File.open(path, 'r') do |file|
@@ -22,14 +22,14 @@ end
 def build
   tree = {}
   dictionaries = ['cedict.zh_CN.utf8', 'wikipedia.zh.utf8']
-  
+
   dictionaries.each do |dictionary|
     puts "Processing #{dictionary}..."
     path = File.join(File.dirname(__FILE__), '../../dict', dictionary)
     process(path, tree)
   end
-  
-  File.open(hash_path, "wb") {|io| Marshal.dump(tree, io)}  
+
+  File.open(hash_path, "wb") {|io| Marshal.dump(tree, io)}
   puts 'Done'
 end
 

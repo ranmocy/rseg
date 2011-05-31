@@ -1,3 +1,4 @@
+##coding: utf-8
 module RsegEngine
   LETTER_SYMBOLS = ('a'..'z').to_a + ('A'..'Z').to_a
 
@@ -6,11 +7,11 @@ module RsegEngine
       @word = ''
       super
     end
-  
+
     def process(char)
       match = false
       word = nil
-    
+
       if LETTER_SYMBOLS.include?(char)
         @word << char
         match = true
@@ -19,8 +20,9 @@ module RsegEngine
         @word = ''
         match = false
       end
-    
+
       [match, word]
-    end  
+    end
   end
 end
+

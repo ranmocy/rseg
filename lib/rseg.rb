@@ -1,5 +1,4 @@
-$KCODE = 'UTF8'
-
+##coding: utf-8
 require 'singleton'
 require 'net/http'
 
