@@ -23,7 +23,6 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "dict/dict.hash",
-     "lib/app.rb",
      "lib/builder/dict.rb",
      "lib/engines/dict.rb",
      "lib/engines/engine.rb",
@@ -40,16 +39,6 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.7.2}
   s.summary = %q{A Chinese Word Segmentation(中文分词) routine in pure Ruby}
-  s.test_files = [
-    "test/test_web.rb",
-     "test/test_finance.rb",
-     "test/test_tech.rb",
-     "test/test_bench.rb",
-     "test/test_sport.rb",
-     "test/test_ent.rb",
-     "test/test_auto.rb",
-     "test/test_news.rb"
-  ]
 
   if s.respond_to? :specification_version then
     s.specification_version = 3

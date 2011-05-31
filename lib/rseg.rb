@@ -1,6 +1,5 @@
 ##coding: utf-8
 require 'singleton'
-require 'net/http'
 
 require File.join(File.dirname(__FILE__), 'engines/engine')
 require File.join(File.dirname(__FILE__), 'engines/dict')
@@ -30,16 +29,6 @@ class Rseg
     def load
       Rseg.instance
       nil
-    end
-    
-    def remote_segment(input)
-      begin
-        response = Net::HTTP.post_form(URI.parse('http://127.0.0.1:4100/seg'), :input => input)
-        response.code == '200' ? response.body.split(' ') : 
-            ["Can't connect to http://localhost:4100\nUse rseg_server to start it"]
-      rescue
-        ["Can't connect to http://localhost:4100\nUse rseg_server to start it"]
-      end
     end
   end
 
