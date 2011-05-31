@@ -7,8 +7,8 @@ port for ruby19
 
 cut the C/S mode down and push a dict.hash which is useful.
 
-Usage not changed
-===============
+Usage (not changed)
+=================
 
     require 'rubygems'
     require 'rseg'
